@@ -1,9 +1,22 @@
-# nuxt
-Nuxt.js 学习
-我们可以在应用中使用第三方模块，一个典型的例子是在客户端和服务端使用 axios 做 HTTP 请求。
+# sjzjams
 
-首先我们需要安装 npm 包：
+> Nuxt.js project
 
-npm install --save axios
-$ npm install
+## Build Setup
+
+``` bash
+# install dependencies
+$ npm install # Or yarn install
+
+# serve with hot reload at localhost:3000
 $ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
