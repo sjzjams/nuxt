@@ -8,7 +8,7 @@
 # install dependencies
 $ npm install # Or yarn install
 
-# serve with hot reload at localhost:3000
+# serve with hot reload at localhost:3000//注意本地localhost：3000访问出现Cannot GET /，把localhost换成127.0.0.1
 $ npm run dev
 #需要用到axios，使用第三方模块需要npm install --save axios
 # build for production and launch server
