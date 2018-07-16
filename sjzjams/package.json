@@ -1,8 +1,8 @@
 {
-  "name": "sjzjams",
+  "name": "crdeitvane",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
-  "author": "sjzjams@qq.com",
+  "description": "fxb ui",
+  "author": "sjzjams",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -22,5 +22,11 @@
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0"
+  },
+  "config": {
+    "nuxt": {
+      "host": "127.0.0.1",
+      "port": "8888"
+    }
   }
 }
