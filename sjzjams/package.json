@@ -24,9 +24,9 @@
     "eslint-plugin-vue": "^4.0.0"
   },
   "config": {
-    "nuxt": {
-      "host": "127.0.0.1",
-      "port": "8888"
+    "nuxt":{
+      "host":"127.0.0.1",
+      "port":"8888"
     }
   }
 }
