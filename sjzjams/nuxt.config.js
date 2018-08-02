@@ -14,6 +14,17 @@ module.exports = {
     ]
   },
   /*
+  **全局css
+   */
+  css: [ '~assets/css/main.css'],
+  render: {
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        return ['script', 'style', 'font'].includes(type)
+      }
+    }
+  },
+  /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
