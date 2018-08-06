@@ -1,6 +1,7 @@
 # crdeitvane
 
 > fxb ui
+>增加路由鉴权，设置server.js中端口需要和package.json里面设置的端口号一致
 
 ## Build Setup
 
