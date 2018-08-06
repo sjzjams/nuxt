@@ -22,6 +22,7 @@
 <script>
 import axios from 'axios'
 export default {
+    transition: 'test',
   data(){
    return { productName: 'world' }
   },

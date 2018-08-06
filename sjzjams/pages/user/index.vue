@@ -11,7 +11,7 @@
     </h2>
      </div>
      <div class="content">
-    <h1 class="red">标题1 {{ title1 }}</h1> 
+    <h1 class="red"><a href="/user/1220561" class="button--green">标题1 {{ title1 }}</a></h1> 
     <span>
         作者1:{{author1}}
     </span>
@@ -31,17 +31,16 @@
 <script>
 import axios from 'axios'
 export default {
+  transition: 'test',
   data(){
    return { productName: 'world' }
   },
   //调用豆瓣api
   async asyncData ({ params }) {
-    var that=this
     return axios.all([
       axios.get('https://api.douban.com/v2/book/1220562'),
       axios.get('https://api.douban.com/v2/book/1220561')])
       .then(axios.spread(function (book1,book2) {
-        console.log('book1',book1.data);
         return { 
           title:book1.data.title, 
           author: book1.data.tags[0].name,

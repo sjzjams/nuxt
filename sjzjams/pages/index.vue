@@ -1,11 +1,18 @@
 <template>
   <section class="container">
+      <div>
+      <h1>Super secret page</h1>
+      <p>If you try to access this URL not connected, you will see the error page telling your that you are not connected.</p>
+      <nuxt-link to="/">Back to the home page</nuxt-link>
+    </div>
     <div class="content">
       <app-logo/>
+     
       <h1 class="title">
         
         creditvane
       </h1>
+       <test/>
       <h2 class="subtitle">
         fxb ui
       </h2>
@@ -19,41 +26,13 @@
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
-
+import test from '~/components/test.vue'
 export default {
+  middleware: 'auth',
   components: {
-    AppLogo
+    AppLogo,
+    test
   }
 }
 </script>
 
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
