@@ -1,13 +1,13 @@
 <template>
  <section class="container">
      <div class="content">
-    <h1 class="red">标题 {{ title }}</h1> 
+    <h1 class="red">标题 {{info.title}}</h1> 
     <span>
-        作者:{{author}}
+        作者:{{info.author}}
     </span>
-     <img :src="image"/>
+     <img :src="info.image"/>
     <h2>
-      简介：{{summary}}
+      简介：{{info.summary}}
     </h2>
      </div>
      <div>
@@ -23,14 +23,20 @@
 import axios from 'axios'
 export default {
     transition: 'test',
+    
   data(){
-   return { productName: 'world' }
+   return {
+    productName: 'world'
+   }
   },
   //调用豆瓣api
   async asyncData ({ params }) {
       console.log(params);
-    let {data}= await  axios.get('https://api.douban.com/v2/book/'+params.id+'')
-    return { title:data.title, author: data.author,summary:data.summary,image:data.image}
+    return  axios.get('https://api.douban.com/v2/book/'+params.id+'')
+    .then((res)=>{
+      return{info:res.data}
+    })
+    //return { title:data.title, author: data.author,summary:data.summary,image:data.image}
   },
 }
 </script>
