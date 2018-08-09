@@ -32,10 +32,12 @@ export default {
   //调用豆瓣api
   async asyncData ({ params }) {
       console.log(params);
-    return  axios.get('https://api.douban.com/v2/book/'+params.id+'')
-    .then((res)=>{
-      return{info:res.data}
-    })
+    let {data}= await  axios.get('https://api.douban.com/v2/book/'+params.id+'')
+    return {info : data}
+    //方式二
+    // .then((res)=>{
+    //   return{info:res.data}
+    // })
     //return { title:data.title, author: data.author,summary:data.summary,image:data.image}
   },
 }
