@@ -1,6 +1,6 @@
 
-const bodyParser = require("bodyParser");
-const session = require("express-session");
+// const bodyParser = require("bodyParser");
+// const session = require("express-session");
 module.exports = {
   /*
   ** Headers of the page 配置页面
@@ -24,24 +24,37 @@ module.exports = {
   ** Nuxt.js uses `connect` module as server
   ** So most of express middleware works with nuxt.js server middleware
   */
- serverMiddleware: [
-  // body-parser middleware
-  bodyParser.json(),
-  // session middleware
-  session({
-    secret: 'super-secret-key',
-    resave: false,
-    saveUninitialized: false,
-    cookie: { maxAge: 60000 }
-  }),
-  // Api middleware
-  // We add /api/login & /api/logout routes
-  '~/api'
-],
+//  serverMiddleware: [
+//   // body-parser middleware
+//   bodyParser.json(),
+//   // session middleware
+//   session({
+//     secret: 'super-secret-key',
+//     resave: false,
+//     saveUninitialized: false,
+//     cookie: { maxAge: 60000 }
+//   }),
+//   // Api middleware
+//   // We add /api/login & /api/logout routes
+//   '~/api'
+// ],
   /*
   **配置全局css
   */
-  css: [ '~assets/css/main.css'],
+ css: [ '~assets/css/main.css','iview/dist/styles/iview.css'],
+ babel:{
+   "plugins": [["import", [
+     {
+       "libraryName": "iview",
+       "styleLibraryName": "src/components",
+       "style": true
+     }
+   ]]],
+   comments: true
+ },
+ plugins: [
+   '@/plugins/iview'
+ ],
   render: {
     bundleRenderer: {
       shouldPreload: (file, type) => {

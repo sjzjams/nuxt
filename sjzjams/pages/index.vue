@@ -6,12 +6,13 @@
       <nuxt-link to="/">Back to the home page</nuxt-link>
     </div>
     <div class="content">
+      <message/>
       <app-logo/>
      
       <h1 class="title">
-        
         creditvane
       </h1>
+     <Button/>
        <test/>
       <h2 class="subtitle">
         fxb ui
@@ -27,11 +28,14 @@
 <script>
 import AppLogo from '~/components/AppLogo.vue'
 import test from '~/components/test.vue'
+import Message from '~/components/Message.vue'
 export default {
-  middleware: 'auth',
+  //middleware: 'auth',
   components: {
     AppLogo,
-    test
+    test,
+    Button,
+    Message
   }
 }
 </script>
