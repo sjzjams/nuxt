@@ -28,6 +28,7 @@
 <script>
 import AppLogo from '~/components/AppLogo.vue'
 import test from '~/components/test.vue'
+import Button from '~/components/Button.vue'
 import Message from '~/components/Message.vue'
 export default {
   //middleware: 'auth',

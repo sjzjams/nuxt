@@ -8,7 +8,7 @@
 # install dependencies
 $ npm install # Or yarn install
 
-# serve with hot reload at localhost:3000 本地出现Cannot GET /可以吧localhost更改为127.0.0.1
+# serve with hot reload at localhost:3000 本地出现Cannot GET /可以吧localhost更改为127.0.0.1,增加第三方插件
 $ npm run dev
 
 # build for production and launch server
